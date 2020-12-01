@@ -1,5 +1,7 @@
 class PrecioFinal
-    def getPrecioFinal
-        return 0
+    @precio=0
+    def calcular_precio_final(price)
+        @precio=price
+        return @precio
     end
 end
