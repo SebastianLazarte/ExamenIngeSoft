@@ -5,10 +5,14 @@ RSpec.describe PrecioFinal do
    end
    it 'Precio final devolver 0' do
     precioF=PrecioFinal.new
-    expect(precioF.calcular_precio_final(0)).to eq(0)
+    expect(precioF.calcular_precio_final(2,0,"UT")).to eq(0)
     end
     it 'Precio final devolver 5' do
         precioF=PrecioFinal.new
-        expect(precioF.calcular_precio_final(5)).to eq(5)
-        end
+        expect(precioF.calcular_precio_final(3,5,"CA")).to eq(5)
+    end
+    it 'Precio final devolver calculo con 3 argumentos' do
+        precioF=PrecioFinal.new
+        expect(precioF.calcular_precio_final(5,2,"UV")).to eq(2)
+    end
 end
