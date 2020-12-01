@@ -1,7 +1,10 @@
 class PrecioFinal
-    @precio=0
+    @precioTotal=0
     def calcular_precio_final(cantItems,precioUnitario,estado)
-        @precio=precioUnitario
-        return @precio
+        @precioTotal=precioUnitario*cantItems
+        if(cantItems>1000)
+            @precioTotal=@precioTotal*0.3
+        end
+        return @precioTotal
     end
 end
